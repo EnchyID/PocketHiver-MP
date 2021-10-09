@@ -32,8 +32,8 @@ class ExampleUI extends PluginBase implements Listener {
         foreach($this->getServer()->getOnlinePlayers() as $online){
             $buttons[] = ["text" => $online->getName()];
         }
-        $player->sendForm(new MenuForm("ONLINE LIST", "You've can see online in servers!", $buttons, function(Player $player, int $selected) : void {
-            $name = $buttons[$selected];
+        $player->sendForm(new MenuForm("ONLINE LIST", "You've can see online in servers!", $buttons, function(Player $player, int $selected) use($buttons) : void {
+            $name = $buttons["text"][$selected];
             $player->sendMessage("You've selected player online of " . $name . "!");
         }));
     }
