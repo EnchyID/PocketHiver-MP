@@ -22,7 +22,7 @@ class ExampleGUI extends PluginBase implements Listener {
         $inventory = new ChestInventory() //Set it to 'ChestInventory'or 'DoubleChestInventory', I can make chest gui!
         $inventory->setName("YOUR TITLE"); //This is name of chest or doublechest!
         $inventory->setViewOnly(); //boolean 'true' or 'false'
-        //You can choose 'setItem' use slot or 'addItem'no slot!
+        //You can choose 'setItem' use slot or 'addItem' no slot!
         $inventory->setItem(/* slot max 26 for Chest, 53 for DoubleChest */, 0, Item::get(297, 0, 1)->setCustomName(/* Name for item */"bread"));
         $inventory->addItem(Item::get(297, 0, 1)->setCustomName("bread"));
         $inventory->setClickCallback([$this, "clickFunction"]); //return $this->clickFunction(options);
