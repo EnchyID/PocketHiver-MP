@@ -4,6 +4,7 @@ namespace me\frogas\examples;
 
 use pocketmine\Player;
 use pocketmine\event\Listener;
+//Required class!
 //Import class ChestInventory or DoubleChestInventory!
 use pocketmine\inventory\api\ChestInventory; //Set it to 'ChestInventory' or 'DoubleChestInventory, I can make chest gui!
 use pocketmine\event\inventory\InventoryTransactionEvent;
