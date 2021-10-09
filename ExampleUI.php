@@ -33,7 +33,7 @@ class ExampleUI extends PluginBase implements Listener {
             $buttons[] = ["text" => $online->getName()];
         }
         $player->sendForm(new MenuForm("ONLINE LIST", "You've can see online in servers!", $buttons, function(Player $player, int $selected) use($buttons) : void {
-            $name = $buttons["text"][$selected];
+            $name = $buttons[][$selected];
             $player->sendMessage("You've selected player online of " . $name . "!");
         }));
     }
